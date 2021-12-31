@@ -1,4 +1,5 @@
 import style from '../statistick/style.module.css'
+import propTypes from 'prop-types'
 
 export default function Statistick({ good, neutral, bad, total, feedback }) {
   return (
@@ -11,4 +12,11 @@ export default function Statistick({ good, neutral, bad, total, feedback }) {
       <span className={style.span}>feedback {feedback}%</span>
     </div>
   )
+}
+Statistick.propTypes = {
+  good: propTypes.number,
+  neutral: propTypes.number,
+  bad: propTypes.number,
+  tota: propTypes.object,
+  feedback: propTypes.number,
 }
